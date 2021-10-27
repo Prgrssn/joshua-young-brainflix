@@ -1,17 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
-import videos from "./data/video-details.json";
-import NextVideo from "./components/nextvideos/NextVideo";
-import { render } from "sass";
+import videodata from "./data/video-details.json";
+import VideoList from "./components/nextvideos/VideoList";
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <NextVideo />
-    </div>
-  );
+const videodetails = videodata;
+
+export default class App extends Component {
+  state = {
+    videos: videodetails,
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <VideoList video={this.state.videos} />
+      </div>
+    );
+  }
 }
-
-export default App;
