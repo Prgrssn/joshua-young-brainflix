@@ -2,5 +2,15 @@
   display: flex;
   flex-direction: row;
 
-  //   &__bar {}
+  &__bar {
+    min-height: 2.25rem;
+    min-width: 15rem;
+    max-width: 100%;
+  }
 }
+
+// #search__bar {
+//   min-height: 2.25rem;
+//   min-width: 15rem;
+//   max-width: 100%;
+// }

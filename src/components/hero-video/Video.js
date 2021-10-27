@@ -1,9 +1,9 @@
+// import "./Video.scss";
 
-
-export default VideoPlayer(props) {
-    return (
-        <div>
-            <video></video>
-        </div>
-    );
-}
+// export default VideoPlayer(props) {
+//     return (
+//             <video className="video-player">
+//             <source src={props.video} type="stream"/>
+//             </video>
+//     );
+// }

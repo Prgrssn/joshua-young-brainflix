@@ -1,7 +1,6 @@
 @use "./fonts.scss" as *;
 @use "./colours.scss" as *;
-@use "./variables.scss" as *;
-@use "./window-widths.scss" as *;
+@use "./media-querries.scss" as *;
 
 * {
   margin: 0;
