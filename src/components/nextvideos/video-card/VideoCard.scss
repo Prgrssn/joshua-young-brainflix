@@ -1,0 +1,39 @@
+@use "../../../styles/global.scss" as *;
+
+.video-card {
+  display: flex;
+  margin: 0.5rem 1rem;
+  width: 100%;
+
+  &__img-container {
+    max-height: 4.5rem;
+    max-width: 33.33%;
+
+    &--img {
+      object-fit: cover;
+      width: 100%;
+      max-height: 100%;
+      border-radius: 4%;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 1rem;
+    width: 66.66%;
+
+    &--title {
+      @include mLabelButton();
+      font-family: "avenir-reg";
+      font-weight: 700;
+      text-align: left;
+    }
+
+    &--channel {
+      @include mBody();
+      text-align: left;
+    }
+  }
+}
