@@ -1,0 +1,75 @@
+@use "./fonts.scss" as *;
+@use "./colours.scss" as *;
+@use "./variables.scss" as *;
+@use "./window-widths.scss" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Typography Mixins
+
+// mobile:
+@mixin mPageHeader {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "avenir-bold";
+}
+
+@mixin mSectionHeader {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: "avenir-bold";
+}
+
+@mixin mSubHeader {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-bold";
+}
+
+@mixin mBody {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "avenir-reg";
+}
+
+@mixin mLabelButton {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: "avenir-bold";
+}
+
+// tablet & desktop:
+
+@mixin pageHeader {
+  font-size: 2.0625rem;
+  line-height: 2.75rem;
+  font-family: "avenir-bold";
+}
+
+@mixin sectionHeader {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: "avenir-bold";
+}
+
+@mixin subHeader {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: "avenir-bold";
+}
+
+@mixin bodyCopy {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: "avenir-reg";
+}
+
+@mixin labelButton {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: "avenir-bold";
+}
