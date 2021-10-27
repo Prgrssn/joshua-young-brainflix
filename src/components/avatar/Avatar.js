@@ -1,15 +1,10 @@
+import avatar from "../../assets/images/Mohan-muruge.jpg";
 import "./Avatar.scss";
 
-function Avatar() {
+export default function Avatar() {
   return (
     <div>
-      <img
-        className="avatar"
-        src="../../assets/images/Mohan-muruge.jpg"
-        alt="Mohan Muruge"
-      />
+      <img className="avatar" src={avatar} alt="Mohan Muruge" />
     </div>
   );
 }
-
-export default Avatar;

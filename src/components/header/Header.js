@@ -1,14 +1,14 @@
 import "../avatar/Avatar";
 import Avatar from "../avatar/Avatar";
+import Logo from "../logo/Logo";
 import "./Header.scss";
 
-function Header() {
+export default function Header() {
   return (
     <div>
       <h1>Hello World!</h1>
+      <Logo />
       <Avatar />
     </div>
   );
 }
-
-export default Header;
