@@ -1,6 +1,6 @@
-import "../avatar/Avatar";
-import Avatar from "../avatar/Avatar";
+import Button from "../button/Button";
 import Logo from "../logo/Logo";
+import Search from "../search/Search";
 import "./Header.scss";
 
 export default function Header() {
@@ -8,7 +8,8 @@ export default function Header() {
     <div>
       <h1>Hello World!</h1>
       <Logo />
-      <Avatar />
+      <Search />
+      <Button />
     </div>
   );
 }
