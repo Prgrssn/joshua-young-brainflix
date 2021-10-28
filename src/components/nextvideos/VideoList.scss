@@ -1,0 +1,7 @@
+@use "../../styles/global" as *;
+
+.video-list-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
