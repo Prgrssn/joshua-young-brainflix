@@ -1,5 +1,6 @@
 import Avatar from "../avatar/Avatar";
 import "./Search.scss";
+import React from "react";
 
 export default function Search() {
   return (

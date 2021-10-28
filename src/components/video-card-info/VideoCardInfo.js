@@ -1,3 +1,4 @@
+import React from "react";
 import "./VideoCardInfo.scss";
 
 // const videoArr = (props) => {

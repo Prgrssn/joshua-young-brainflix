@@ -1,3 +1,4 @@
+import React from "react";
 import Button from "../button/Button";
 import Logo from "../logo/Logo";
 import Search from "../search/Search";

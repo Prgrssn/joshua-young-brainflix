@@ -1,5 +1,6 @@
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import "./Avatar.scss";
+import React from "react";
 
 export default function Avatar() {
   return (
