@@ -6,10 +6,10 @@ import "./Header.scss";
 
 export default function Header() {
   return (
-    <div className="header">
+    <header className="header">
       <Logo />
       <Search />
       <Button />
-    </div>
+    </header>
   );
 }
