@@ -1,6 +1,6 @@
 import React from "react";
 import "./VideoList.scss";
-import VideoCard from "./video-card/VideoCard";
+import VideoCard from "../video-card/VideoCard";
 
 export default function VideoList(props) {
   return (
