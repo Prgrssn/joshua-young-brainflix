@@ -1,18 +1,16 @@
 import React from "react";
+import CommentForm from "../comment-form/CommentForm";
 import CommentList from "../comment-list/CommentList";
+import VideoPlayer from "../video-player/VideoPlayer";
 import "./Hero.scss";
 
-export default function Hero() {
+export default function Hero(props) {
+  console.log(props);
   return (
     <section className="hero-section">
-      <h1 className="hero-section__video-title">Video Title</h1>
-      <div className="hero-section__video-description">
-        <p className="hero-section__video-description--description">
-          Video Description.
-        </p>
-        <p className="hero-section__video-description--comments">3 Comments</p>
-      </div>
-      <CommentList />
+      <VideoPlayer key={props.heroData} />;
+      <CommentForm />
+      <CommentList comment={props.heroData} />
     </section>
   );
 }

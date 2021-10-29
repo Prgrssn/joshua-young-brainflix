@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar } from "react-native-elements/dist/avatar/Avatar";
+import Avatar from "../avatar/Avatar";
 import "./CommentForm.scss";
 
 export default function CommentForm() {

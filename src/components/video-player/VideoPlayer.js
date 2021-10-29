@@ -1,13 +1,12 @@
 import React from "react";
-import "./Video.scss";
+import "./VideoPlayer.scss";
 
 export default function VideoPlayer(props) {
   return (
     <div className="video-player">
       <video
         controls
-        poster={props.video}
-        src={props.video}
+        poster={props.heroVideo.image}
         className="video-player__video"
       ></video>
     </div>

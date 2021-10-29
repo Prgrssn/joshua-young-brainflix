@@ -1,18 +1,17 @@
 import React from "react";
-import { Avatar } from "react-native-elements";
 import "./CommentCard.scss";
 
 export default function CommentCard(props) {
-  const commentArr = videodetails.map((comments) => {
-    return [comments.comments];
-  });
-
+  console.log(props);
   return (
-    <div className="comment-container">
-      <Avatar className="comment-container__avatar" />
-      <h4 className="comment-container__name">Comment Name</h4>
-      <h5 className="comment-container__timestamp">Date</h5>
-      <p className="comment-container__comment">Comment</p>
-    </div>
+    <article className="comment-container">
+      <h4 key={props.comment.name} className="comment-container__name">
+        {props.comment.name}
+      </h4>
+      <h5 className="comment-container__timestamp">
+        {props.comment.timestamp}
+      </h5>
+      <p className="comment-container__comment">{props.comment.comment}</p>
+    </article>
   );
 }
