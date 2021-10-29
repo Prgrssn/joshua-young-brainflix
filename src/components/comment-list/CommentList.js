@@ -9,7 +9,6 @@ export default function CommentList(props) {
       {props.heroVideo.comments.map((comment) => {
         return <CommentCard key={comment.name} comment={comment} />;
       })}
-      ;
     </section>
   );
 }

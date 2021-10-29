@@ -6,6 +6,7 @@ import VideoList from "./components/nextvideos/VideoList";
 import VideoPlayer from "./components/video-player/VideoPlayer";
 import CommentForm from "./components/comment-form/CommentForm";
 import CommentList from "./components/comment-list/CommentList";
+import VideoDetails from "./components/hero-video-details/VideoDetails";
 // import Hero from "./components/hero/Hero";
 
 // array of videos
@@ -24,8 +25,21 @@ export default class App extends Component {
     heroData: videodetails[0],
   };
 
+  changeVideo = (id) => {
+    console.log("Id clicked: ", id);
+    const clickedVideo = this.state.videoData.findIndex(
+      (videoData) => id === videoData.id
+    );
+    this.setState({
+      heroData: this.state.videoData[clickedVideo],
+    });
+
+    // this.setState({
+    //   heroData:
+    // })
+  };
+
   render() {
-    console.log(this);
     return (
       <div className="App">
         <Header />
@@ -33,11 +47,13 @@ export default class App extends Component {
           video={this.state.videoData}
           heroVideo={this.state.heroData}
         />
+        <VideoDetails video={this.state.heroData} />
         <CommentForm />
         <CommentList heroVideo={this.state.heroData} />
         <VideoList
           video={this.state.videoData}
           heroVideo={this.state.heroData}
+          changeVideo={this.changeVideo}
         />
       </div>
     );
