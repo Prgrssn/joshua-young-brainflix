@@ -1,0 +1,12 @@
+@use "../../styles/_media-querries.scss" as *;
+@use "../../styles/_global.scss" as *;
+
+.video-player {
+  width: 100%;
+  background-color: black;
+
+  &__video {
+    object-fit: contain;
+    width: 100%;
+  }
+}
