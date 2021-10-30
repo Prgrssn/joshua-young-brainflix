@@ -18,22 +18,3 @@ export default function VideoList({ video, heroVideo, changeVideo }) {
     </section>
   );
 }
-
-// export default class VideoList extends Component {
-//   render() {
-//     return (
-//       <section className="video-list-section">
-//         <h2 className="video-list-section__title">Next Videos</h2>
-//         {this.props.video
-//           .filter((video) => video.id !== props.heroData.id)
-//           .map((video) => (
-//             <VideoCard
-//               key={video.title}
-//               video={video}
-//               changeVideo={this.props.changeVideo}
-//             />
-//           ))}
-//       </section>
-//     );
-//   }
-// }

@@ -1,9 +1,15 @@
 import React from "react";
+import "./VideoDetails.scss";
 import views from "../../assets/icons/views.svg";
 import likes from "../../assets/icons/likes.svg";
-import "./VideoDetails.scss";
 
 export default function HeroVideoDetails({ video }) {
+  const formattedDate = Intl.DateTimeFormat("EN-us", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(video.timestamp);
+
   return (
     <section className="hero-detail">
       <h1 className="hero-detail__vid-title">{video.title}</h1>
@@ -12,7 +18,7 @@ export default function HeroVideoDetails({ video }) {
           {video.channel}
         </h4>
         <h5 className="hero-detail__vid-aux-deet-container__date">
-          {video.timestamp}
+          {formattedDate}
         </h5>
       </div>
       <div className="hero-detail__soc-container">
