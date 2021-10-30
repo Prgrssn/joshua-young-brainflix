@@ -10,6 +10,9 @@ export default function CommentCard({ comment }) {
 
   return (
     <article className="comment-container">
+      <div className="comment-container__avatar">
+        <img className="comment-container__avatar--img" alt="user avatar" />
+      </div>
       <h4 key={comment.name} className="comment-container__name">
         {comment.name}
       </h4>

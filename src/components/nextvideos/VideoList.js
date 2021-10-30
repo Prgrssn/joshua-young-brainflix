@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./VideoList.scss";
 import VideoCard from "../video-card/VideoCard";
 

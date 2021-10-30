@@ -2,7 +2,6 @@ import React from "react";
 import "./VideoPlayer.scss";
 
 export default function VideoPlayer({ heroVideo }) {
-  console.log(heroVideo.image);
   return (
     <div className="video-player">
       <video

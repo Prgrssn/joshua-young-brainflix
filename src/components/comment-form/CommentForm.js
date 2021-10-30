@@ -20,7 +20,11 @@ export default function CommentForm() {
           type="submit"
           value="submit"
         >
-          <img className="comment-add__form--button-icon" src={commentIcon} />
+          <img
+            className="comment-add__form--button-icon"
+            src={commentIcon}
+            alt="comment icon"
+          />
           COMMENT
         </button>
       </form>

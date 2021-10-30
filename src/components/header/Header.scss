@@ -1,7 +1,19 @@
 @use "../../styles/global" as *;
+@use "../../styles/colours" as *;
+@use "../../styles/fonts" as *;
+@use "../../styles/media-querries" as *;
 
 .header {
   display: flex;
   flex-direction: column;
-  width: 100%;
+
+  &__button {
+    background-color: $BrainFlix-blue;
+    color: $White;
+    height: 2.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 0.25rem;
+    margin: 1rem;
+  }
 }

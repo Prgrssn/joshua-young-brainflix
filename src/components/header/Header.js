@@ -10,7 +10,12 @@ export default function Header() {
       <Logo />
       <Search />
       <button className="header__button">
-        <img class="header_button--icon" src={uploadIcon} /> UPLOAD
+        <img
+          className="header_button--icon"
+          src={uploadIcon}
+          alt="upload icon"
+        />{" "}
+        UPLOAD
       </button>
     </header>
   );

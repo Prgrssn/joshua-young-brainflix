@@ -1,16 +1,34 @@
+@use "../../styles/global" as *;
+@use "../../styles/colours" as *;
+@use "../../styles/fonts" as *;
+@use "../../styles/media-querries" as *;
+
 .search {
   display: flex;
   flex-direction: row;
 
   &__bar {
+    background: url("../../assets/icons/search.svg") 1rem no-repeat;
+    background-color: $Alabaster;
+    border: 1px solid $Mercury;
+    border-radius: 0.25rem;
+    font-family: "avenir-reg";
+    font-size: 0.75rem;
+    color: $Silver;
+    font-weight: bold;
     min-height: 2.25rem;
     min-width: 15rem;
     max-width: 100%;
+    margin: 0 1rem;
+    padding: 0 3rem;
+  }
+
+  &__button {
+    background-color: $BrainFlix-blue;
+    color: $White;
+    height: 2.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 0.25rem;
   }
 }
-
-// #search__bar {
-//   min-height: 2.25rem;
-//   min-width: 15rem;
-//   max-width: 100%;
-// }

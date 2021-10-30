@@ -13,7 +13,7 @@ export default function Search() {
           placeholder="Search"
         />
       </form>
-      <Avatar className="search__button" />
+      <Avatar className="search__avatar" />
     </div>
   );
 }
