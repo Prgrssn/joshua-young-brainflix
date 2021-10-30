@@ -3,35 +3,41 @@ import views from "../../assets/icons/views.svg";
 import likes from "../../assets/icons/likes.svg";
 import "./VideoDetails.scss";
 
-export default function HeroVideoDetails(props) {
+export default function HeroVideoDetails({ video }) {
   return (
-    <section className="hero-detail-section">
-      <h1 className="hero-video__title">{props.video.title}</h1>
-      <div className="detail-container">
-        <h4 className="detail-container__channel">{props.video.channel}</h4>
-        <h5 className="detail-container__date">{props.video.timestamp}</h5>
+    <section className="hero-detail">
+      <h1 className="hero-detail__vid-title">{video.title}</h1>
+      <div className="hero-detail__vid-aux-deet-container">
+        <h4 className="hero-detail__vid-aux-deet-container__channel">
+          {video.channel}
+        </h4>
+        <h5 className="hero-detail__vid-aux-deet-container__date">
+          {video.timestamp}
+        </h5>
       </div>
-      <div className="vl-container">
-        <div className="vl-container__view-container">
+      <div className="hero-detail__soc-container">
+        <div className="hero-detail__soc-container--view-container">
           <img
-            className="vl-container__view-container--view-icon"
+            className="soc-container__view-container--view-icon"
             src={views}
             alt="view icon"
           />
-          <p className="vl-container__view-container--views">
-            {props.video.views}
-          </p>
+          <p className="soc-container__view-container--views">{video.views}</p>
         </div>
-        <div className="vl-container__likes-container">
+        <div className="soc-container__likes-container">
           <img
-            className="vl-container__likes-container--likes-icon"
+            className="soc-container__likes-container--likes-icon"
             src={likes}
             alt="like icon"
           />
-          <p className="vl-container__likes-container--likes">
-            {props.video.likes}
-          </p>
+          <p className="soc-container__likes-container--likes">{video.likes}</p>
         </div>
+      </div>
+      <div className="hero-detail__des-container">
+        <p className="hero-detail__des-container--des">{video.description}</p>
+        <p className="hero-detail__des-container--num-comments">
+          {video.comments.length} Comments
+        </p>
       </div>
     </section>
   );
