@@ -43,7 +43,6 @@ export default class App extends Component {
           video={this.state.videoData}
           heroVideo={this.state.heroData}
           changeVideo={this.changeVideo}
-          updateList={this.updateList}
         />
       </div>
     );
