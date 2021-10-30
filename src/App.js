@@ -12,31 +12,27 @@ import VideoDetails from "./components/hero-video-details/VideoDetails";
 // array of videos
 const videodetails = videodata;
 
-// array returning comments within comments
-const commentArr = videodetails.map((comments) => {
-  return [comments.comments];
+const sortedVidList = videodetails.filter((videos) => {
+  return videos !== videodetails[0];
 });
-
-console.log(commentArr);
+console.log(sortedVidList);
 
 export default class App extends Component {
   state = {
-    videoData: videodetails,
+    videoData: sortedVidList,
     heroData: videodetails[0],
   };
 
   changeVideo = (id) => {
-    console.log("Id clicked: ", id);
     const clickedVideo = this.state.videoData.findIndex(
       (videoData) => id === videoData.id
     );
     this.setState({
       heroData: this.state.videoData[clickedVideo],
+      videoData: videodetails.filter(
+        (videoData) => clickedVideo.toString() !== videoData.id
+      ),
     });
-
-    // this.setState({
-    //   heroData:
-    // })
   };
 
   render() {
