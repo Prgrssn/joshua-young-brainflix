@@ -1,0 +1,51 @@
+@use "../../styles/global" as *;
+@use "../../styles/colours" as *;
+@use "../../styles/fonts" as *;
+@use "../../styles/media-querries" as *;
+
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid $Silver;
+  padding: 1rem 0.5rem;
+
+  &__avatar {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-right: 0.5rem;
+    margin-left: -0.25rem;
+
+    &--img {
+      width: 2.25rem;
+      height: 2.25rem;
+      background-color: $Mercury;
+      border-radius: 50%;
+    }
+  }
+
+  &__comment-info {
+    text-align: left;
+
+    &--name {
+      @include mSubHeader;
+    }
+
+    &--timestamp {
+      @include mSubHeader;
+      font-family: "avenir-reg";
+      color: $Silver;
+    }
+
+    &--nd-contain {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 0.25rem;
+    }
+  }
+
+  &__comment {
+    @include mBody;
+  }
+}

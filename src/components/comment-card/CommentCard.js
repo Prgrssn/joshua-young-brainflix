@@ -11,13 +11,22 @@ export default function CommentCard({ comment }) {
   return (
     <article className="comment-container">
       <div className="comment-container__avatar">
-        <img className="comment-container__avatar--img" alt="user avatar" />
+        <div className="comment-container__avatar--img" />
       </div>
-      <h4 key={comment.name} className="comment-container__name">
-        {comment.name}
-      </h4>
-      <h5 className="comment-container__timestamp">{formattedDate}</h5>
-      <p className="comment-container__comment">{comment.comment}</p>
+      <div className="comment-container__comment-info">
+        <div className="comment-container__comment-info--nd-contain">
+          <h4
+            key={comment.name}
+            className="comment-container__comment-info--name"
+          >
+            {comment.name}
+          </h4>
+          <h5 className="comment-container__comment-info--timestamp">
+            {formattedDate}
+          </h5>
+        </div>
+        <p className="comment-container__comment">{comment.comment}</p>
+      </div>
     </article>
   );
 }
