@@ -1,5 +1,6 @@
 import Avatar from "../avatar/Avatar";
 import "./Search.scss";
+import uploadIcon from "../../assets/icons/upload.svg";
 import React from "react";
 
 export default function Search() {
@@ -13,6 +14,14 @@ export default function Search() {
           placeholder="Search"
         />
       </form>
+      <button className="search__button">
+        <img
+          className="search__button--icon"
+          src={uploadIcon}
+          alt="upload icon"
+        />{" "}
+        UPLOAD
+      </button>
       <Avatar className="search__avatar" />
     </div>
   );

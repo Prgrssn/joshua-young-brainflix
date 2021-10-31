@@ -1,7 +1,17 @@
 @use "../../styles/global" as *;
+@use "../../styles/colours" as *;
+@use "../../styles/fonts" as *;
+@use "../../styles/media-querries" as *;
 
 .video-list-section {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
+  &__title {
+    @include mSectionHeader;
+    margin: 0.25rem 1rem;
+    text-align: left;
+    color: $Silver;
+  }
 }
