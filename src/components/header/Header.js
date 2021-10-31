@@ -11,7 +11,7 @@ export default function Header() {
       <Search />
       <button className="header__button">
         <img
-          className="header_button--icon"
+          className="header__button--icon"
           src={uploadIcon}
           alt="upload icon"
         />{" "}

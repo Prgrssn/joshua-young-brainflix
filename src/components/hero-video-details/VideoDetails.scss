@@ -1,0 +1,100 @@
+@use "../../styles/media-querries" as *;
+@use "../../styles/global" as *;
+@use "../../styles/fonts" as *;
+@use "../../styles/colours" as *;
+
+.hero-detail {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+
+  &__title {
+    text-align: left;
+    border-bottom: 1px solid $Silver;
+    padding: 1rem 0;
+  }
+
+  &__channel {
+    @include mSubHeader();
+    padding: 1rem 0 0.5rem 0;
+    text-align: left;
+  }
+
+  &__date {
+    @include mBody();
+    color: $Silver;
+    padding: 0.5rem 0 1rem 0;
+    text-align: left;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid $Silver;
+    padding-bottom: 0.5rem;
+
+    &--aux {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--soc {
+      display: flex;
+      flex-direction: column;
+      padding-right: 3.5rem;
+    }
+  }
+
+  &__view-container {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0;
+
+    &--view-icon {
+      padding: 0 0.75rem;
+    }
+
+    &--views {
+      @include mSubHeader();
+      color: $Silver;
+      font-family: "avenir-reg";
+      font-weight: 600;
+    }
+  }
+
+  &__likes-container {
+    display: flex;
+    flex-direction: row;
+
+    &--likes-icon {
+      padding: 0 0.75rem;
+    }
+
+    &--likes {
+      @include mSubHeader();
+      color: $Silver;
+      font-family: "avenir-reg";
+      font-weight: 600;
+    }
+  }
+
+  &__des-container {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+
+    &--des {
+      @include mBody();
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
+    &--num-comments {
+      @include mBody();
+      text-align: left;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+  }
+}

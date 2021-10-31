@@ -12,31 +12,29 @@ export default function HeroVideoDetails({ video }) {
 
   return (
     <section className="hero-detail">
-      <h1 className="hero-detail__vid-title">{video.title}</h1>
-      <div className="hero-detail__vid-aux-deet-container">
-        <h4 className="hero-detail__vid-aux-deet-container__channel">
-          {video.channel}
-        </h4>
-        <h5 className="hero-detail__vid-aux-deet-container__date">
-          {formattedDate}
-        </h5>
-      </div>
-      <div className="hero-detail__soc-container">
-        <div className="hero-detail__soc-container--view-container">
-          <img
-            className="soc-container__view-container--view-icon"
-            src={views}
-            alt="view icon"
-          />
-          <p className="soc-container__view-container--views">{video.views}</p>
+      <h1 className="hero-detail__title">{video.title}</h1>
+      <div className="hero-detail__container">
+        <div className="hero-detail__container--aux">
+          <h4 className="hero-detail__channel">By {video.channel}</h4>
+          <h5 className="hero-detail__date">{formattedDate}</h5>
         </div>
-        <div className="soc-container__likes-container">
-          <img
-            className="soc-container__likes-container--likes-icon"
-            src={likes}
-            alt="like icon"
-          />
-          <p className="soc-container__likes-container--likes">{video.likes}</p>
+        <div className="hero-detail__container--soc">
+          <div className="hero-detail__view-container">
+            <img
+              className="hero-detail__view-container--view-icon"
+              src={views}
+              alt="view icon"
+            />
+            <p className="hero-detail__view-container--views">{video.views}</p>
+          </div>
+          <div className="hero-detail__likes-container">
+            <img
+              className="hero-detail__likes-container--likes-icon"
+              src={likes}
+              alt="like icon"
+            />
+            <p className="hero-detail__likes-container--likes">{video.likes}</p>
+          </div>
         </div>
       </div>
       <div className="hero-detail__des-container">
