@@ -20,7 +20,7 @@ export default function Search() {
           src={uploadIcon}
           alt="upload icon"
         />{" "}
-        UPLOAD
+        UPLOAD!
       </button>
       <Avatar className="search__avatar" />
     </div>
