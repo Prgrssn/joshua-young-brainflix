@@ -50,6 +50,7 @@
       text-align: left;
       overflow: hidden;
       text-overflow: ellipsis;
+      max-width: 9rem;
 
       @include tablet {
         @include subHeader;
