@@ -6,7 +6,9 @@ import "./CommentForm.scss";
 export default function CommentForm() {
   return (
     <div className="comment-add">
-      <Avatar className="comment-add__avatar" />
+      <div className="comment-add__avatar">
+        <Avatar />
+      </div>
       <form className="comment-add__form">
         <div className="comment-add__form--input-cont">
           <label className="comment-add__form--lable" for="textarea">

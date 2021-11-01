@@ -11,17 +11,30 @@
   border-bottom: 1px solid $Silver;
   padding: 1rem 0.5rem;
 
+  @include tablet {
+    padding: 1.5rem 0;
+  }
+
   &__avatar {
     width: 2.25rem;
     height: 2.25rem;
     margin-right: 0.5rem;
     margin-left: -0.25rem;
 
+    @include tablet {
+      margin-right: 1.25rem;
+    }
+
     &--img {
       width: 2.25rem;
       height: 2.25rem;
       background-color: $Mercury;
       border-radius: 50%;
+
+      @include tablet {
+        height: 2.5rem;
+        width: 2.5rem;
+      }
     }
   }
 
@@ -30,12 +43,21 @@
 
     &--name {
       @include mSubHeader;
+
+      @include tablet {
+        @include subHeader;
+      }
     }
 
     &--timestamp {
       @include mSubHeader;
       font-family: "avenir-reg";
       color: $Silver;
+
+      @include tablet {
+        @include subHeader;
+        font-family: "avenir-reg";
+      }
     }
 
     &--nd-contain {
@@ -48,5 +70,10 @@
 
   &__comment {
     @include mBody;
+
+    @include tablet {
+      @include bodyCopy;
+      padding-right: 1.25rem;
+    }
   }
 }

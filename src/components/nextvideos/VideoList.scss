@@ -8,10 +8,16 @@
   flex-direction: column;
   justify-content: space-evenly;
 
+  @include tablet {
+    margin: 0 2.25rem;
+  }
+
   &__title {
     @include mSectionHeader;
     margin: 0.25rem 1rem;
     text-align: left;
     color: $Silver;
+
+    @include sectionHeader;
   }
 }
