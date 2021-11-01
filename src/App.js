@@ -4,9 +4,7 @@ import Header from "./components/header/Header";
 import videodata from "./data/video-details.json";
 import VideoList from "./components/nextvideos/VideoList";
 import VideoPlayer from "./components/video-player/VideoPlayer";
-import CommentForm from "./components/comment-form/CommentForm";
-import CommentList from "./components/comment-list/CommentList";
-import VideoDetails from "./components/hero-video-details/VideoDetails";
+import Hero from "./components/hero/Hero";
 
 // array of videos
 const videodetails = videodata;
@@ -35,20 +33,12 @@ export default class App extends Component {
           video={this.state.videoData}
           heroVideo={this.state.heroData}
         />
-        <section className="body">
-          <div className="body__vid-comment">
-            <VideoDetails video={this.state.heroData} />
-            <CommentForm />
-            <CommentList heroVideo={this.state.heroData} />
-          </div>
-          <section className="body__vid-list">
-            <VideoList
-              video={this.state.videoData}
-              heroVideo={this.state.heroData}
-              changeVideo={this.changeVideo}
-            />
-          </section>
-        </section>
+        <Hero video={this.state.videoData} heroVideo={this.state.heroData} />
+        <VideoList
+          video={this.state.videoData}
+          heroVideo={this.state.heroData}
+          changeVideo={this.changeVideo}
+        />
       </div>
     );
   }

@@ -1,5 +1,4 @@
 import React from "react";
-// import VideoCardInfo from "../video-card-info/VideoCardInfo";
 import "./VideoCard.scss";
 
 export default function VideoCard({ video, changeVideo }) {
