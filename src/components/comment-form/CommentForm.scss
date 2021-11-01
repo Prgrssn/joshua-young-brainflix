@@ -17,7 +17,7 @@
 
   @include desktop {
     margin-left: 7rem;
-    margin-right: 0;
+    justify-content: space-evenly;
   }
 
   &__form {
@@ -32,8 +32,9 @@
     }
 
     @include desktop {
-      width: 50vw;
+      width: 45vw;
       margin-left: 1rem;
+      padding-right: 1rem;
     }
 
     &--input-cont {
@@ -97,6 +98,10 @@
         margin-left: 1rem;
         padding: 0.75rem;
         justify-content: space-evenly;
+      }
+
+      @include desktop {
+        margin-left: 2.5rem;
       }
 
       &:hover {

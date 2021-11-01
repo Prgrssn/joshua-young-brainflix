@@ -50,13 +50,13 @@
   }
 
   .body__vid-comment {
-    width: 60%;
+    width: 65%;
     margin-left: 2rem;
     padding-right: 0;
   }
 
   .body__vid-list {
-    width: 40%;
+    width: 35%;
     padding-left: 0;
   }
 }
