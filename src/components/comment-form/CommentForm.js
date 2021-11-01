@@ -8,13 +8,16 @@ export default function CommentForm() {
     <div className="comment-add">
       <Avatar className="comment-add__avatar" />
       <form className="comment-add__form">
-        <label className="comment-add__form--lable">
-          JOIN THE CONVERSATION
-        </label>
-        <textarea
-          className="comment-add__form--comment"
-          placeholder="Add a new comment"
-        />
+        <div className="comment-add__form--input-cont">
+          <label className="comment-add__form--lable" for="textarea">
+            JOIN THE CONVERSATION
+          </label>
+          <textarea
+            className="comment-add__form--comment"
+            name="textarea"
+            placeholder="Add a new comment"
+          />
+        </div>
         <button
           className="comment-add__form--button"
           type="submit"
