@@ -33,7 +33,7 @@
 
     @include desktop {
       width: 45vw;
-      margin-left: 1rem;
+      margin-left: 0.25rem;
       padding-right: 1rem;
     }
 
@@ -41,6 +41,10 @@
       @include tablet {
         @include flexDirection(column);
         margin-left: -1.25rem;
+      }
+
+      @include desktop {
+        margin-left: 0.25rem;
       }
     }
 
