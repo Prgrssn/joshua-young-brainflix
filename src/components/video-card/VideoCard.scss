@@ -7,6 +7,10 @@
   padding: 0.5rem 1rem;
   width: 100vw;
 
+  @include desktop {
+    width: 30vw;
+  }
+
   &__img-container {
     max-height: 10vh;
     max-width: 30vw;
@@ -14,6 +18,10 @@
 
     @include tablet {
       width: 17vw;
+    }
+
+    @include desktop {
+      padding-left: 1rem;
     }
 
     &--img {
@@ -31,6 +39,10 @@
     margin: 0 1rem;
     width: 60%;
 
+    @include desktop {
+      width: 20vw;
+    }
+
     &--title {
       @include mLabelButton();
       font-family: "avenir-reg";
@@ -42,6 +54,10 @@
       @include tablet {
         @include subHeader;
         width: 22vw;
+      }
+
+      @include desktop {
+        width: 13vw;
       }
     }
 

@@ -12,6 +12,12 @@
     margin: 0 2.25rem 1rem 2.25rem;
   }
 
+  @include desktop {
+    padding-top: 1.5rem;
+    width: 40%;
+    border-left: 1px solid $Silver;
+  }
+
   &__title {
     @include mSectionHeader;
     margin: 0.25rem 1rem;
@@ -20,6 +26,10 @@
 
     @include tablet {
       @include subHeader;
+    }
+
+    @include desktop {
+      margin-left: 2rem;
     }
   }
 }

@@ -36,14 +36,20 @@ export default class App extends Component {
           video={this.state.videoData}
           heroVideo={this.state.heroData}
         />
-        <VideoDetails video={this.state.heroData} />
-        <CommentForm />
-        <CommentList heroVideo={this.state.heroData} />
-        <VideoList
-          video={this.state.videoData}
-          heroVideo={this.state.heroData}
-          changeVideo={this.changeVideo}
-        />
+        <div className="body">
+          <div className="body__vid-comment">
+            <VideoDetails video={this.state.heroData} />
+            <CommentForm />
+            <CommentList heroVideo={this.state.heroData} />
+          </div>
+          <div className="body__vid-list">
+            <VideoList
+              video={this.state.videoData}
+              heroVideo={this.state.heroData}
+              changeVideo={this.changeVideo}
+            />
+          </div>
+        </div>
       </div>
     );
   }

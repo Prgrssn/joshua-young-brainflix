@@ -42,3 +42,20 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .body__vid-comment {
+    width: 60%;
+    margin-left: 2rem;
+  }
+
+  .body__vid-list {
+    width: 40%;
+    padding-left: 0;
+  }
+}

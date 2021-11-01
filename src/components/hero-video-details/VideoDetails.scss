@@ -12,6 +12,12 @@
     margin: 0 2rem;
   }
 
+  @include desktop {
+    margin-top: 1rem;
+    margin-left: 7rem;
+    margin-right: 0;
+  }
+
   &__title {
     text-align: left;
     border-bottom: 1px solid $Silver;

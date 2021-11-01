@@ -9,6 +9,10 @@
     padding: 0 2.25rem;
   }
 
+  @include desktop {
+    padding: 0 14rem;
+  }
+
   &__video {
     object-fit: contain;
     width: 100%;

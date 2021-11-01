@@ -11,4 +11,9 @@
   @include tablet {
     margin: 1.25rem 2.25rem;
   }
+
+  @include desktop {
+    margin-left: 7rem;
+    margin-right: 0;
+  }
 }
