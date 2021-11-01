@@ -11,7 +11,7 @@ export default function CommentForm() {
       </div>
       <form className="comment-add__form">
         <div className="comment-add__form--input-cont">
-          <label className="comment-add__form--lable" for="textarea">
+          <label className="comment-add__form--lable">
             JOIN THE CONVERSATION
           </label>
           <textarea

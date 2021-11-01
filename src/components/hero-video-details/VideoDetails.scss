@@ -21,7 +21,7 @@
   &__title {
     text-align: left;
     border-bottom: 1px solid $Silver;
-    padding: 1rem 0;
+    padding: 1rem 3rem 1rem 0;
 
     @include tablet {
       border: none;
@@ -91,7 +91,7 @@
   &__view-container {
     display: flex;
     flex-direction: row;
-    padding: 1rem 0 0 0;
+    padding: 1rem 0;
 
     @include tablet {
       padding: 0;
@@ -166,7 +166,7 @@
       }
 
       @include desktop {
-        padding: 0.25rem 1rem;
+        padding: 0.25rem 1rem 0.25rem 0;
         margin-bottom: 2.75rem;
       }
     }
