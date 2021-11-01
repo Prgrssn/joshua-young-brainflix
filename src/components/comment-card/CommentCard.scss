@@ -15,6 +15,10 @@
     padding: 1.5rem 0;
   }
 
+  @include desktop {
+    padding: 2rem 0;
+  }
+
   &__avatar {
     width: 2.25rem;
     height: 2.25rem;

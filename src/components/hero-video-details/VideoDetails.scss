@@ -164,6 +164,10 @@
         padding: 0.25rem;
         margin-bottom: 1.5rem;
       }
+
+      @include desktop {
+        margin-bottom: 2.75rem;
+      }
     }
 
     &--num-comments {
