@@ -7,7 +7,6 @@ import VideoPlayer from "./components/video-player/VideoPlayer";
 import CommentForm from "./components/comment-form/CommentForm";
 import CommentList from "./components/comment-list/CommentList";
 import VideoDetails from "./components/hero-video-details/VideoDetails";
-// import Hero from "./components/hero/Hero";
 
 // array of videos
 const videodetails = videodata;
