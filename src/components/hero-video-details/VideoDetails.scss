@@ -1,23 +1,37 @@
-@use "../../styles/media-querries" as *;
 @use "../../styles/global" as *;
 @use "../../styles/fonts" as *;
 @use "../../styles/colours" as *;
+@use "../../styles/media-querries" as *;
 
 .hero-detail {
   display: flex;
   flex-direction: column;
   margin: 0 1rem;
 
+  @include tablet {
+    margin: 0 2rem;
+  }
+
   &__title {
     text-align: left;
     border-bottom: 1px solid $Silver;
     padding: 1rem 0;
+
+    @include tablet {
+      border: none;
+      @include pageHeader();
+    }
   }
 
   &__channel {
     @include mSubHeader();
     padding: 1rem 0 0.5rem 0;
     text-align: left;
+
+    @include tablet {
+      @include subHeader();
+      padding: 0 1rem 1rem 0;
+    }
   }
 
   &__date {
@@ -25,6 +39,12 @@
     color: $Silver;
     padding: 0.5rem 0 1rem 0;
     text-align: left;
+
+    @include tablet {
+      @include subHeader();
+      font-family: "avenir-reg";
+      padding: 0 1rem 1rem 1rem;
+    }
   }
 
   &__container {
@@ -34,25 +54,48 @@
     border-bottom: 1px solid $Silver;
     padding-bottom: 0.5rem;
 
+    @include tablet {
+      @include flexDirection(row);
+      margin-top: -1rem;
+    }
+
     &--aux {
       display: flex;
       flex-direction: column;
+
+      @include tablet {
+        @include flexDirection(row);
+        padding-top: 1rem;
+      }
     }
 
     &--soc {
       display: flex;
       flex-direction: column;
       padding-right: 3.5rem;
+
+      @include tablet {
+        @include flexDirection(row);
+        padding-right: 0rem;
+        align-content: flex-start;
+      }
     }
   }
 
   &__view-container {
     display: flex;
     flex-direction: row;
-    padding: 1rem 0;
+    padding: 1rem 0 0 0;
+
+    @include tablet {
+      padding: 0;
+    }
 
     &--view-icon {
       padding: 0 0.75rem;
+      @include tablet {
+        padding: 0 0.25rem;
+      }
     }
 
     &--views {
@@ -60,6 +103,12 @@
       color: $Silver;
       font-family: "avenir-reg";
       font-weight: 600;
+
+      @include tablet {
+        padding: 1rem;
+        @include subHeader();
+        font-family: "avenir-reg";
+      }
     }
   }
 
@@ -67,8 +116,16 @@
     display: flex;
     flex-direction: row;
 
+    @include tablet {
+      padding: 0rem;
+    }
+
     &--likes-icon {
       padding: 0 0.75rem;
+
+      @include tablet {
+        padding: 0 0.25rem;
+      }
     }
 
     &--likes {
@@ -76,6 +133,12 @@
       color: $Silver;
       font-family: "avenir-reg";
       font-weight: 600;
+
+      @include tablet {
+        padding: 1rem;
+        @include subHeader();
+        font-family: "avenir-reg";
+      }
     }
   }
 
@@ -88,6 +151,13 @@
       @include mBody();
       text-align: left;
       margin-bottom: 1rem;
+
+      @include tablet {
+        @include subHeader();
+        font-family: "avenir-reg";
+        padding: 0.25rem;
+        margin-bottom: 1.5rem;
+      }
     }
 
     &--num-comments {
@@ -95,6 +165,11 @@
       text-align: left;
       font-weight: 600;
       margin-bottom: 1rem;
+
+      @include tablet {
+        @include subHeader();
+        margin-bottom: 1.5rem;
+      }
     }
   }
 }

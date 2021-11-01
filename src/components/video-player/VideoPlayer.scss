@@ -5,8 +5,13 @@
   width: 100%;
   background-color: black;
 
+  @include tablet {
+    padding: 0 2.25rem;
+  }
+
   &__video {
     object-fit: contain;
     width: 100%;
+    aspect-ratio: 16 /9;
   }
 }

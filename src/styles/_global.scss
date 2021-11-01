@@ -72,3 +72,10 @@
   line-height: 1.25rem;
   font-family: "avenir-bold";
 }
+
+// Mixins
+
+@mixin flexDirection($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
