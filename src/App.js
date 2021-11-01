@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import videodata from "./data/video-details.json";
-import VideoList from "./components/nextvideos/VideoList";
 import VideoPlayer from "./components/video-player/VideoPlayer";
-import Hero from "./components/hero/Hero";
+import Main from "./components/main/Main";
 
 // array of videos
 const videodetails = videodata;
@@ -33,8 +32,7 @@ export default class App extends Component {
           video={this.state.videoData}
           heroVideo={this.state.heroData}
         />
-        <Hero video={this.state.videoData} heroVideo={this.state.heroData} />
-        <VideoList
+        <Main
           video={this.state.videoData}
           heroVideo={this.state.heroData}
           changeVideo={this.changeVideo}
