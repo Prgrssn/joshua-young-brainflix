@@ -1,5 +1,5 @@
 import Avatar from "../avatar/Avatar";
-import "./Search.scss";
+import "./search.scss";
 import uploadIcon from "../../assets/icons/upload.svg";
 import React from "react";
 
