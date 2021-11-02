@@ -1,43 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/header/Header";
-import videodata from "./data/video-details.json";
-import VideoPlayer from "./components/video-player/VideoPlayer";
-import Main from "./components/main/Main";
+import HomePage from "./pages/HomePage/HomePage";
+import UploadPage from "./pages/UploadPage/UploadPage";
 
-// array of videos
-const videodetails = videodata;
-
-export default class App extends Component {
-  state = {
-    videoData: videodetails,
-    heroData: videodetails[0],
-  };
-
-  changeVideo = (id) => {
-    const clickedVideoId = this.state.videoData.findIndex(
-      (videoData) => id === videoData.id
-    );
-
-    this.setState({
-      heroData: this.state.videoData[clickedVideoId],
-    });
-  };
-
-  render() {
-    return (
-      <div className="App">
-        <Header />
-        <VideoPlayer
-          video={this.state.videoData}
-          heroVideo={this.state.heroData}
-        />
-        <Main
-          video={this.state.videoData}
-          heroVideo={this.state.heroData}
-          changeVideo={this.changeVideo}
-        />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <Header />
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/upload" component={UploadPage} />
+      </Switch>
+    </Router>
+  );
 }
+
+export default App;

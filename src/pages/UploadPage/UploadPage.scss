@@ -1,0 +1,53 @@
+@use "../../styles/global" as *;
+@use "../../styles/colours" as *;
+@use "../../styles/fonts" as *;
+@use "../../styles/media-querries" as *;
+
+.upload-section {
+  @include flexDirection(column);
+  margin: 1rem;
+
+  &__title {
+    @include mSubHeader;
+    color: $Silver;
+  }
+}
+
+.upload-form {
+  @include flexDirection(column);
+
+  &__lable {
+    @include mSubHeader;
+    color: $Silver;
+  }
+
+  &__video {
+    &--img-cont {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 0.25rem;
+    }
+    &--img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0.25rem;
+    }
+  }
+
+  &__form {
+    @include flexDirection(column);
+  }
+
+  &__input-title {
+    background-color: $Alabaster;
+    border: 1px solid $Silver;
+    border-radius: 4px;
+  }
+
+  &__input-des {
+    background-color: $Alabaster;
+    border: 1px solid $Silver;
+    border-radius: 4px;
+  }
+}
