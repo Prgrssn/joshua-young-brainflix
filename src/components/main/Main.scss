@@ -2,3 +2,9 @@
 @use "../../styles/colours" as *;
 @use "../../styles/fonts" as *;
 @use "../../styles/media-querries" as *;
+
+.main-section {
+  @include desktop {
+    @include flexDirection(row);
+  }
+}
