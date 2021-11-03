@@ -10,5 +10,10 @@
 
   @include tablet {
     @include flexDirection(row);
+    margin: 1 2.25rem;
+  }
+
+  @include desktop {
+    justify-content: space-between;
   }
 }
