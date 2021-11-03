@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Logo() {
   return (
-    <div>
+    <div className="logo-container">
       <img className="logo" src={logo} alt={logo} />
     </div>
   );

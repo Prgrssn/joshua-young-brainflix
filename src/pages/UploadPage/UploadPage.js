@@ -1,10 +1,11 @@
 import React from "react";
 import "./UploadPage.scss";
-import photo from "../../assets/images/bless.jpeg";
+import photo from "../../assets/images/retallack.jpeg";
 
 function UploadPage() {
   return (
     <div className="upload-section">
+      <hr className="upload-section__hr" />
       <h1 className="upload-section__title">Upload Video</h1>
       <form className="upload-form">
         <div className="upload-form__video">
@@ -12,7 +13,11 @@ function UploadPage() {
             VIDEO THUMBNAIL
           </label>
           <div className="upload-form__video--img-cont">
-            <img className="upload-form__video--img" src={photo} alt="relief" />
+            <img
+              className="upload-form__video--img"
+              src={photo}
+              alt="josh ski touring"
+            />
           </div>
         </div>
         <div className="upload-form__form">
@@ -33,9 +38,15 @@ function UploadPage() {
             placeholder="Add a description to your video"
           />
         </div>
+        <div className="upload-from__button-cont">
+          <button className="upload-form__button-cont--cancel-button">
+            CANCEL
+          </button>
+          <button className="upload-form__button-cont--publish-button">
+            PUBLISH
+          </button>
+        </div>
       </form>
-      <button className="upload-section__upload-button">PUBLISH</button>
-      <button className="upload-section__cancel-button">CANCEL</button>
     </div>
   );
 }

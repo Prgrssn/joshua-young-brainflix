@@ -4,8 +4,7 @@
 @use "../../styles/media-querries" as *;
 
 .header {
-  display: flex;
-  flex-direction: column;
+  @include flexDirection(column);
   justify-content: space-around;
   width: 100%;
 

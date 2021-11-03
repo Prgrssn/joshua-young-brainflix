@@ -13,3 +13,15 @@
     margin-top: 1.5rem;
   }
 }
+
+.logo-container {
+  margin: 0 auto;
+
+  @include tablet {
+    margin: 0;
+  }
+
+  @include desktop {
+    margin: 0;
+  }
+}

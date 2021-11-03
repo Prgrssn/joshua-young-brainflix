@@ -19,7 +19,7 @@ export default function Search() {
           className="search__button--icon"
           src={uploadIcon}
           alt="upload icon"
-        />{" "}
+        />
         UPLOAD
       </button>
       <Avatar className="search__avatar" />
