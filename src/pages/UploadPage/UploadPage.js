@@ -38,7 +38,7 @@ function UploadPage() {
             placeholder="Add a description to your video"
           />
         </div>
-        <div className="upload-from__button-cont">
+        <div className="upload-form__button-cont">
           <button className="upload-form__button-cont--cancel-button">
             CANCEL
           </button>

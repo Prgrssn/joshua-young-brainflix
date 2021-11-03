@@ -88,9 +88,11 @@
   }
 
   &__button-cont {
+    @include flexDirection(column);
+    flex-direction: column-reverse;
+
     @include tablet {
       @include flexDirection(row);
-      width: 100%;
       justify-content: flex-end;
     }
 
@@ -108,10 +110,6 @@
 
       @include tablet {
         @include labelButton;
-        // position: absolute;
-        // background-size: 1.25rem;
-        // bottom: 1rem;
-        // right: 0;
         width: 20%;
       }
 
@@ -132,9 +130,7 @@
 
       @include tablet {
         @include labelButton;
-        // position: absolute;
-        // bottom: 1rem;
-        // right: 10rem;
+        margin-top: 1rem;
         width: 20%;
       }
     }
