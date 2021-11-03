@@ -16,6 +16,10 @@
       @include pageHeader;
       margin: 1rem 2.25rem;
     }
+
+    @include desktop {
+      margin: 1rem 10rem;
+    }
   }
 }
 
@@ -27,8 +31,12 @@
     margin: 0.5rem 2.25rem;
     border-top: 1px solid $Silver;
     padding-top: 1.25rem;
-    position: relative;
-    padding-bottom: 7rem;
+  }
+
+  @include desktop {
+    margin: 0.5rem 10rem;
+    @include flexDirection(row);
+    justify-content: flex-start;
   }
 
   &__lable {
@@ -38,6 +46,10 @@
   }
 
   &__video {
+    @include desktop {
+      width: 40%;
+      border-bottom: 1px solid $Silver;
+    }
     &--img-cont {
       height: 9rem;
       width: 100%;
@@ -47,6 +59,11 @@
       @include tablet {
         height: 20%;
         width: 40%;
+      }
+
+      @include desktop {
+        height: 75%;
+        width: 70%;
       }
     }
     &--img {
@@ -63,6 +80,12 @@
     @include tablet {
       padding-bottom: 1.5rem;
       border-bottom: 1px solid $Silver;
+    }
+
+    @include desktop {
+      @include flexDirection(column);
+      margin-left: -5rem;
+      width: 70%;
     }
   }
 
@@ -82,6 +105,7 @@
     border: 1px solid $Silver;
     border-radius: 4px;
     min-height: 4rem;
+    min-width: 100%;
     font-family: "avenir-reg";
     font-weight: 600;
     padding: 0.5rem;
@@ -90,10 +114,16 @@
   &__button-cont {
     @include flexDirection(column);
     flex-direction: column-reverse;
+    margin: 0 1rem;
 
     @include tablet {
       @include flexDirection(row);
       justify-content: flex-end;
+      margin: 1rem 2.25rem;
+    }
+
+    @include desktop {
+      margin: 1rem 10rem;
     }
 
     &--publish-button {

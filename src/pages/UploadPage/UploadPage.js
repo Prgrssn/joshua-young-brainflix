@@ -4,7 +4,7 @@ import photo from "../../assets/images/retallack.jpeg";
 
 function UploadPage() {
   return (
-    <div className="upload-section">
+    <section className="upload-section">
       <hr className="upload-section__hr" />
       <h1 className="upload-section__title">Upload Video</h1>
       <form className="upload-form">
@@ -38,16 +38,16 @@ function UploadPage() {
             placeholder="Add a description to your video"
           />
         </div>
-        <div className="upload-form__button-cont">
-          <button className="upload-form__button-cont--cancel-button">
-            CANCEL
-          </button>
-          <button className="upload-form__button-cont--publish-button">
-            PUBLISH
-          </button>
-        </div>
       </form>
-    </div>
+      <div className="upload-form__button-cont">
+        <button className="upload-form__button-cont--cancel-button">
+          CANCEL
+        </button>
+        <button className="upload-form__button-cont--publish-button">
+          PUBLISH
+        </button>
+      </div>
+    </section>
   );
 }
 
