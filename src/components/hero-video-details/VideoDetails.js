@@ -39,9 +39,9 @@ export default function HeroVideoDetails({ video }) {
       </div>
       <div className="hero-detail__des-container">
         <p className="hero-detail__des-container--des">{video.description}</p>
-        <p className="hero-detail__des-container--num-comments">
+        {/* <p className="hero-detail__des-container--num-comments">
           {video.comments.length} Comments
-        </p>
+        </p> */}
       </div>
     </section>
   );

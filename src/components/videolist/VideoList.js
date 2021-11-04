@@ -18,3 +18,5 @@ export default function VideoList({ video, heroVideo, changeVideo }) {
     </section>
   );
 }
+
+// const handleChange = (videoObj) => {video.changeVideo(videoObj)};
