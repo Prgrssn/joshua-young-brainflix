@@ -4,12 +4,7 @@ import "./VideoCard.scss";
 export default function VideoCard({ video, changeVideo }) {
   return (
     <NavLink to={`/videos/${video.id}`}>
-      <div
-        className="video-card"
-        onClick={(event) => {
-          changeVideo(video.id);
-        }}
-      >
+      <div className="video-card">
         <div className="video-card__img-container">
           <img
             className="video-card__img-container--img"
