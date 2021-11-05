@@ -6,7 +6,7 @@ import React from "react";
 
 export default function Search() {
   return (
-    <div className="search">
+    <header className="search">
       <form action="/" method="get">
         <input
           className="search__bar"
@@ -14,18 +14,12 @@ export default function Search() {
           type="text"
           placeholder="Search"
         />
-      </form>
-      <Link to="/upload">
         <button className="search__button">
-          <img
-            className="search__button--icon"
-            src={uploadIcon}
-            alt="upload icon"
-          />
-          UPLOAD
+          <Link to="/upload">UPLOAD</Link>
         </button>
-      </Link>
+      </form>
+
       <Avatar className="search__avatar" />
-    </div>
+    </header>
   );
 }

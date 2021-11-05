@@ -88,29 +88,26 @@
 
     &--button {
       @include mLabelButton;
-      display: flex;
-      flex-direction: row;
+      background: url("../../assets/icons/add_comment.svg") 0.5rem no-repeat;
       background-color: $BrainFlix-blue;
       color: $White;
       height: 2.5rem;
       width: 100%;
       border: none;
       border-radius: 4px;
-      padding-top: 0.5rem;
 
       @include tablet {
         @include labelButton();
         width: 9.375rem;
-        position: relative;
         margin-top: 1.75rem;
         margin-left: 1rem;
-        padding: 0.75rem;
-        justify-content: space-evenly;
       }
 
       @include desktop {
-        margin-left: 2rem;
-        padding-right: 0.75rem;
+        background-size: 1rem;
+        width: 14rem;
+        // margin-left: 2rem;
+        // padding-right: 0.75rem;
       }
 
       &:hover {

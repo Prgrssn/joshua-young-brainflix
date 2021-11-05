@@ -2,12 +2,18 @@ import React from "react";
 import "./UploadPage.scss";
 import photo from "../../assets/images/retallack.jpeg";
 
-function UploadPage() {
+import { Link } from "react-router-dom";
+
+export default function UploadPage() {
+  const handleSubmit = () => {
+    alert("Video Published!");
+  };
+
   return (
     <section className="upload-section">
       <hr className="upload-section__hr" />
       <h1 className="upload-section__title">Upload Video</h1>
-      <form className="upload-form">
+      <form id="upload-form" className="upload-form">
         <div className="upload-form__video">
           <label className="upload-form__lable" htmlFor="photo">
             VIDEO THUMBNAIL
@@ -43,12 +49,16 @@ function UploadPage() {
         <button className="upload-form__button-cont--cancel-button">
           CANCEL
         </button>
-        <button className="upload-form__button-cont--publish-button">
-          PUBLISH
+
+        <button
+          form="upload-form"
+          type="submit"
+          onClick={handleSubmit}
+          className="upload-form__button-cont--publish-button"
+        >
+          <Link to="/">PUBLISH</Link>
         </button>
       </div>
     </section>
   );
 }
-
-export default UploadPage;

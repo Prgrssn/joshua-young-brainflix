@@ -1,9 +1,12 @@
 import React from "react";
 import Avatar from "../avatar/Avatar";
-import commentIcon from "../../assets/icons/add_comment.svg";
 import "./CommentForm.scss";
 
 export default function CommentForm() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div className="comment-add">
       <div className="comment-add__avatar">
@@ -24,12 +27,8 @@ export default function CommentForm() {
           className="comment-add__form--button"
           type="submit"
           value="submit"
+          onClick={handleSubmit}
         >
-          <img
-            className="comment-add__form--button-icon"
-            src={commentIcon}
-            alt="comment icon"
-          />
           COMMENT
         </button>
       </form>

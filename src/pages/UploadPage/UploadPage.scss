@@ -136,6 +136,10 @@
       margin: 1rem 10rem;
     }
 
+    &--publish-link {
+      text-decoration: none;
+    }
+
     &--publish-button {
       @include mLabelButton;
       background: url("../../assets/icons/publish.svg") 1rem no-repeat;
