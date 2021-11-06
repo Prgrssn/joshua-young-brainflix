@@ -6,14 +6,17 @@
 .header {
   @include flexDirection(column);
   justify-content: space-around;
-  width: 100%;
+  // width: 100%;
 
   @include tablet {
     @include flexDirection(row);
-    margin: 1 2.25rem;
+    margin: 1rem 2.25rem;
   }
 
   @include desktop {
     justify-content: space-between;
+    margin: 0 9.5rem;
+    padding: 1rem;
+    height: 5rem;
   }
 }
