@@ -15,10 +15,7 @@ export default function CommentCard({ comment }) {
       </div>
       <div className="comment-container__comment-info">
         <div className="comment-container__comment-info--nd-contain">
-          <h4
-            key={comment.name}
-            className="comment-container__comment-info--name"
-          >
+          <h4 className="comment-container__comment-info--name">
             {comment.name}
           </h4>
           <h5 className="comment-container__comment-info--timestamp">

@@ -10,7 +10,7 @@ const APIKey = "?api_key=02e4d4cc-df22-4061-b063-e1c63073a3fa";
 export default class HomePage extends Component {
   state = {
     videoData: [],
-    heroData: null,
+    heroData: {},
     isLoading: true,
   };
 
@@ -29,6 +29,25 @@ export default class HomePage extends Component {
       })
       .catch((err) => console.log(err));
   }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const videoID = this.state.heroData.id;
+
+    axios
+      .post(`${videoListAPI}/${videoID}/comments/${APIKey}`, {
+        name: "Joshua" || null,
+        comment: event.target.comment.value || null,
+      })
+      .then((res) => {
+        console.log(res);
+        return axios.get(`${videoListAPI}/${videoID}/${APIKey}`).then((res) => {
+          const video = res.data;
+          this.setState({ heroData: video });
+        });
+      })
+      .catch((err) => console.log(err));
+  };
 
   componentDidUpdate(prevProps, prevState) {
     const newVideoID = this.props.match.params.id;
@@ -56,6 +75,7 @@ export default class HomePage extends Component {
             video={this.state.videoData}
             heroVideo={this.state.heroData}
             changeVideo={this.changeVideo}
+            handleSubmit={this.handleSubmit}
           />
         </>
       );

@@ -43,7 +43,7 @@
 
   &__button {
     @include mLabelButton;
-    background-image: url("../../assets/icons/upload.svg") 1rem no-repeat;
+    background: url("../../assets/icons/upload.svg") 1rem no-repeat;
     background-color: $BrainFlix-blue;
     color: $White;
     height: 2.5rem;

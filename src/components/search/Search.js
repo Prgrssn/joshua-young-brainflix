@@ -1,7 +1,7 @@
 import Avatar from "../avatar/Avatar";
 import { Link } from "react-router-dom";
 import "./Search.scss";
-import uploadIcon from "../../assets/icons/upload.svg";
+// import uploadIcon from "../../assets/icons/upload.svg";
 import React from "react";
 
 export default function Search() {
