@@ -18,8 +18,9 @@ export default function Search() {
           <Link to="/upload">UPLOAD</Link>
         </button>
       </form>
-
-      <Avatar className="search__avatar" />
+      <div className="search__avatar">
+        <Avatar />
+      </div>
     </article>
   );
 }

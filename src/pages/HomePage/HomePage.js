@@ -36,7 +36,7 @@ export default class HomePage extends Component {
 
     axios
       .post(`${videoListAPI}/${videoID}/comments/${APIKey}`, {
-        name: "Joshua" || null,
+        name: "JYoungMoneyMillionaire" || null,
         comment: event.target.comment.value || null,
       })
       .then((res) => {
