@@ -10,7 +10,7 @@
   @include tablet {
     @include flexDirection(row);
     margin: 1rem 2.25rem;
-    height: 5rem;
+    height: 4.5rem;
   }
 
   @include desktop {
