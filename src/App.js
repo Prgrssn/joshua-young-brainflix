@@ -1,56 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/header/Header";
-import videodata from "./data/video-details.json";
-import VideoList from "./components/nextvideos/VideoList";
-import VideoPlayer from "./components/video-player/VideoPlayer";
-import CommentForm from "./components/comment-form/CommentForm";
-import CommentList from "./components/comment-list/CommentList";
-import VideoDetails from "./components/hero-video-details/VideoDetails";
-// import Hero from "./components/hero/Hero";
+import HomePage from "./pages/HomePage/HomePage";
+import UploadPage from "./pages/UploadPage/UploadPage";
 
-// array of videos
-const videodetails = videodata;
-
-export default class App extends Component {
-  state = {
-    videoData: videodetails,
-    heroData: videodetails[0],
-  };
-
-  changeVideo = (id) => {
-    const clickedVideoId = this.state.videoData.findIndex(
-      (videoData) => id === videoData.id
-    );
-
-    this.setState({
-      heroData: this.state.videoData[clickedVideoId],
-    });
-  };
-
-  render() {
-    return (
-      <div className="App">
-        <Header />
-        <VideoPlayer
-          video={this.state.videoData}
-          heroVideo={this.state.heroData}
-        />
-        <section className="body">
-          <div className="body__vid-comment">
-            <VideoDetails video={this.state.heroData} />
-            <CommentForm />
-            <CommentList heroVideo={this.state.heroData} />
-          </div>
-          <section className="body__vid-list">
-            <VideoList
-              video={this.state.videoData}
-              heroVideo={this.state.heroData}
-              changeVideo={this.changeVideo}
-            />
-          </section>
-        </section>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <Header />
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/videos/:id" component={HomePage} />
+        <Route path="/upload" component={UploadPage} />
+      </Switch>
+    </Router>
+  );
 }
+
+export default App;

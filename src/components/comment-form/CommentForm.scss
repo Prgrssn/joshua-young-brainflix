@@ -16,8 +16,8 @@
   }
 
   @include desktop {
-    margin-left: 7rem;
-    justify-content: space-evenly;
+    margin: 0 1rem 0 8.5rem;
+    justify-content: center;
   }
 
   &__form {
@@ -32,9 +32,9 @@
     }
 
     @include desktop {
-      width: 45vw;
-      margin-left: 0.25rem;
-      padding-right: 1rem;
+      width: 100%;
+      padding: 2rem 2.25rem 2rem 1rem;
+      // padding-right: 1rem;
     }
 
     &--input-cont {
@@ -62,6 +62,10 @@
         text-align: left;
         margin-left: 0.5rem;
       }
+
+      @include desktop {
+        margin-left: 0;
+      }
     }
 
     &--comment {
@@ -80,6 +84,10 @@
         width: 28rem;
       }
 
+      @include desktop {
+        width: 25rem;
+      }
+
       &:focus {
         outline: none;
         border: 2px solid $Mercury;
@@ -88,28 +96,23 @@
 
     &--button {
       @include mLabelButton;
-      display: flex;
-      flex-direction: row;
+      background: url("../../assets/icons/add_comment.svg") 0.5rem no-repeat;
       background-color: $BrainFlix-blue;
       color: $White;
       height: 2.5rem;
       width: 100%;
       border: none;
       border-radius: 4px;
-      padding-top: 0.5rem;
 
       @include tablet {
         @include labelButton();
         width: 9.375rem;
-        position: relative;
         margin-top: 1.75rem;
         margin-left: 1rem;
-        padding: 0.75rem;
-        justify-content: space-evenly;
       }
 
       @include desktop {
-        margin-left: 2.5rem;
+        // background-size: 1rem;
       }
 
       &:hover {
@@ -118,7 +121,7 @@
     }
 
     &--button-icon {
-      height: 1.5rem;
+      height: 1.25rem;
       margin: 0 3rem 0.5rem 1rem;
 
       @include tablet {
@@ -126,13 +129,24 @@
         margin-right: 0.5rem;
         margin-left: -0.5rem;
       }
+
+      @include desktop {
+        margin: 0;
+        padding-right: 0.25rem;
+      }
     }
   }
 
   &__avatar {
     margin-top: 1.75rem;
     @include tablet {
-      margin-top: 1.25rem;
+      margin-top: 2rem;
+      margin-right: 1rem;
+
+      @include desktop {
+        margin-top: 3.75rem;
+        margin-left: 1rem;
+      }
     }
   }
 }
@@ -141,6 +155,6 @@
   @include tablet {
     height: 2.5rem;
     width: 2.5rem;
-    margin-top: 0rem;
+    margin-left: 0rem;
   }
 }

@@ -1,28 +1,24 @@
 import Avatar from "../avatar/Avatar";
 import "./search.scss";
-import uploadIcon from "../../assets/icons/upload.svg";
 import React from "react";
 
 export default function Search() {
   return (
-    <div className="search">
-      <form action="/" method="get">
+    <article className="search">
+      <form className="search__form" action="/" method="get">
         <input
           className="search__bar"
           id="search__bar"
           type="text"
           placeholder="Search"
         />
+        <button className="search__button">
+          <Link to="/upload">UPLOAD</Link>
+        </button>
       </form>
-      <button className="search__button">
-        <img
-          className="search__button--icon"
-          src={uploadIcon}
-          alt="upload icon"
-        />{" "}
-        UPLOAD
-      </button>
-      <Avatar className="search__avatar" />
-    </div>
+      <div className="search__avatar">
+        <Avatar />
+      </div>
+    </article>
   );
 }

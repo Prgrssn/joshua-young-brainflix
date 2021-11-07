@@ -11,5 +11,24 @@
 
   @include tablet {
     margin-top: 1.5rem;
+    margin-left: 2.5rem;
+  }
+
+  @include desktop {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.logo-container {
+  margin: 0 auto;
+
+  @include tablet {
+    margin: 0;
+  }
+
+  @include desktop {
+    padding: 0.5rem;
+    margin-top: 1rem;
   }
 }

@@ -1,11 +1,6 @@
 import React from "react";
 import "./VideoCardInfo.scss";
 
-// const videoArr = (props) => {
-//   const videoTitle = {props.title}
-//   const
-// }
-
 export default function VideoCardInfo(props) {
   return (
     <div>

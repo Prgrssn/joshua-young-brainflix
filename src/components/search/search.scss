@@ -4,15 +4,37 @@
 @use "../../styles/media-querries" as *;
 
 .search {
-  display: flex;
-  flex-direction: row;
+  @include flexDirection(row);
   justify-content: space-around;
   position: relative;
   height: 7rem;
 
   @include tablet {
-    margin: 1rem 1rem 0 2rem;
+    margin: 1rem 2.25rem 1rem 3.5rem;
     height: max-content;
+  }
+
+  @include desktop {
+    margin-bottom: 1rem;
+    padding: 0;
+    height: fit-content;
+    margin-left: 10rem;
+    width: 100%;
+    height: fit-content;
+  }
+
+  &__form {
+    @include tablet {
+      @include flexDirection(row);
+      height: fit-content;
+    }
+
+    @include desktop {
+      @include flexDirection(row);
+      align-content: center;
+      justify-content: center;
+      margin-left: 12rem;
+    }
   }
 
   &__bar {
@@ -34,42 +56,58 @@
       outline: none;
       border: 2px solid $Mercury;
     }
+
+    @include tablet {
+      width: 5rem;
+      margin-bottom: 1rem;
+    }
+
+    @include desktop {
+      margin: 0;
+      padding-left: 3rem;
+      padding-right: 0;
+      width: 10rem;
+      max-height: 2.5rem;
+
+      // position: absolute;
+      // top: 0;
+      // right: 15rem;
+    }
   }
 
   &__button {
     @include mLabelButton;
-    @include flexDirection(row);
+    background: url("../../assets/icons/upload.svg") 1rem no-repeat;
     background-color: $BrainFlix-blue;
     color: $White;
     height: 2.5rem;
     width: 90%;
     border: none;
     border-radius: 4px;
-    padding-top: 0.75rem;
     position: absolute;
     bottom: 1rem;
+    left: 1rem;
 
     @include tablet {
       width: 9.375rem;
       position: relative;
       margin-top: 1rem;
       margin-right: 1rem;
-      justify-content: space-evenly;
+      // justify-content: space-evenly;
+    }
+
+    @include desktop {
+      // // margin-top: 1.5rem;
+      // padding: 0;
     }
 
     &:hover {
       background-color: $BrainFlix-DarkBlue;
     }
+  }
 
-    &--icon {
-      height: 1.5rem;
-      margin: -0.25rem 5.25rem 2rem 1rem;
-
-      @include tablet {
-        margin-left: -0.75rem;
-        margin-right: 0px;
-      }
-    }
+  &__avatar {
+    margin-left: 1rem;
   }
 }
 
@@ -77,7 +115,7 @@
   margin-right: 1rem;
 
   @include tablet {
-    margin-top: 0;
+    margin-left: 1rem;
     margin-right: 0;
   }
 }

@@ -9,11 +9,7 @@ export default function VideoList({ video, heroVideo, changeVideo }) {
       {video
         .filter((video) => video.id !== heroVideo.id)
         .map((video) => (
-          <VideoCard
-            key={video.title}
-            video={video}
-            changeVideo={changeVideo}
-          />
+          <VideoCard key={video.title} video={video} />
         ))}
     </section>
   );

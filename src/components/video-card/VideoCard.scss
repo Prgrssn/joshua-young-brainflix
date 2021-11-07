@@ -4,11 +4,17 @@
 
 .video-card {
   display: flex;
+  flex-direction: row;
   padding: 0.5rem 1rem;
   width: 100vw;
 
+  @include tablet {
+    padding-left: 2.25rem;
+  }
+
   @include desktop {
     width: 30vw;
+    padding-left: 1rem;
   }
 
   &__img-container {
@@ -39,6 +45,10 @@
     margin: 0 1rem;
     width: 60%;
 
+    @include tablet {
+      // width: 10vw;
+    }
+
     @include desktop {
       width: 20vw;
     }
@@ -48,9 +58,6 @@
       font-family: "avenir-reg";
       font-weight: 700;
       text-align: left;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 9rem;
 
       @include tablet {
         @include subHeader;
