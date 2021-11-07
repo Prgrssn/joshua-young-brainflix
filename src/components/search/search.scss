@@ -10,13 +10,31 @@
   height: 7rem;
 
   @include tablet {
-    margin: 1rem 2.25rem;
+    margin: 1rem 2.25rem 1rem 3.5rem;
     height: max-content;
   }
 
   @include desktop {
-    margin: 0;
+    margin-bottom: 1rem;
     padding: 0;
+    height: fit-content;
+    margin-left: 10rem;
+    width: 100%;
+    height: fit-content;
+  }
+
+  &__form {
+    @include tablet {
+      @include flexDirection(row);
+      height: fit-content;
+    }
+
+    @include desktop {
+      @include flexDirection(row);
+      align-content: center;
+      justify-content: center;
+      margin-left: 12rem;
+    }
   }
 
   &__bar {
@@ -39,11 +57,21 @@
       border: 2px solid $Mercury;
     }
 
+    @include tablet {
+      width: 5rem;
+      margin-bottom: 1rem;
+    }
+
     @include desktop {
       margin: 0;
       padding-left: 3rem;
       padding-right: 0;
-      width: 35%;
+      width: 10rem;
+      max-height: 2.5rem;
+
+      // position: absolute;
+      // top: 0;
+      // right: 15rem;
     }
   }
 
@@ -65,12 +93,12 @@
       position: relative;
       margin-top: 1rem;
       margin-right: 1rem;
-      justify-content: space-evenly;
+      // justify-content: space-evenly;
     }
 
     @include desktop {
-      margin: 1rem;
-      padding: 0;
+      // // margin-top: 1.5rem;
+      // padding: 0;
     }
 
     &:hover {

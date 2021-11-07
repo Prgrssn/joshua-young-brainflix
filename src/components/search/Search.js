@@ -6,8 +6,8 @@ import React from "react";
 
 export default function Search() {
   return (
-    <header className="search">
-      <form action="/" method="get">
+    <article className="search">
+      <form className="search__form" action="/" method="get">
         <input
           className="search__bar"
           id="search__bar"
@@ -20,6 +20,6 @@ export default function Search() {
       </form>
 
       <Avatar className="search__avatar" />
-    </header>
+    </article>
   );
 }
