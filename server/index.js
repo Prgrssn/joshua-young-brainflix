@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
+
 app.use(express.json());
+app.use(express.urlencoded());
 
 let videoData = [];
 
@@ -37,25 +39,25 @@ app.get("/videos/:id", (req, res) => {
 
 app.post("/videos", (res, req) => {
   console.log(req.body);
-  //   res.status(200);
-  //   let videos = videoData;
-  //   const { id, title, image, description } = req.body;
-  //   const newVideo = { id, title, image, description };
-  //   videos.push(newVideo);
-  //   fs.writeFile("./data/video-details.json", JSON.stringify(videos), (err) => {
-  //     if (err) {
-  //       console.log(err);
-  //       return;
-  //     } else {
-  //       console.log("Successfully created new video");
-  // //     }
-  //   });
 
-  //   if (newVideo) {
-  //     res.status(201).json(newVideo);
-  //   } else {
-  //     res.status(500).send("Video not uploaded");
-  //   }
+  let videos = videoData;
+  const { id, title, image, description } = req.body;
+  const newVideo = { id, title, image, description };
+  videos.push(newVideo);
+  fs.writeFile("./data/video-details.json", JSON.stringify(videos), (err) => {
+    if (err) {
+      console.log(err);
+      return;
+    } else {
+      console.log("Successfully created new video");
+    }
+  });
+
+  if (newVideo) {
+    res.status(201).json(newVideo);
+  } else {
+    res.status(500).send("Video not uploaded");
+  }
 });
 
 app.listen(8080, () => {
