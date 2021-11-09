@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const app = express();
 const fs = require("fs");
+const { randomUUID } = require("crypto");
 
 let videoData = [];
 
@@ -22,9 +23,10 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
+  let videos = videoData;
   let videoId = req.params.id;
 
-  const singleVideo = videoData.find((video) => {
+  const singleVideo = videos.find((video) => {
     return video.id === videoId;
   });
 
@@ -37,9 +39,8 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   let videos = videoData;
-  const { id, title, image, description } = req.body;
-  const newVideo = { id, title, image, description };
-  console.log(req);
+  const { title, description } = req.body;
+  const newVideo = { id: randomUUID(), title, description };
   videos.push(newVideo);
   fs.writeFile("./data/video-details.json", JSON.stringify(videos), (err) => {
     if (err) {
@@ -57,19 +58,41 @@ router.post("/", (req, res) => {
   }
 });
 
-router.get("/:id/comments", (req, res) => {
-  console.log(res);
-  let videoId = req.params.id;
+// router.post("/:id/comments", (req, res) => {
+//   let videos = videoData;
+//   let videoId = req.params.id;
 
-  const singleVideo = videoData.find((video) => {
-    return video.id === videoId;
-  });
+//   const singleVideo = videos.find((video) => {
+//     return video.id === videoId;
+//   });
 
-  if (singleVideo) {
-    res.json(singleVideo);
-  } else {
-    res.status(404).send("This video does not exist");
-  }
-});
+//   const { name, comment } = req.body;
+//   const newComment = { id: randomUUID(), name, comment };
+
+//   if (newComment) {
+//     videos[indexOf(singleVideo)];
+//     console.log(videos);
+//   } else {
+//     console.log((err) => err);
+//   }
+
+//   //   videos[indexOf(singleVideo)]
+
+//   //   videos[indexOf(singleVideo)].comments.push(newComment);
+//   //   fs.writeFile("./data/video-details.json", JSON.stringify(videos), (err) => {
+//   //     if (err) {
+//   //       console.log(err);
+//   //       return;
+//   //     } else {
+//   //       console.log("Successfully added new comment");
+//   //     }
+//   //   });
+
+//   //   if (newComment) {
+//   //     res.status(201).json(newComment);
+//   //   } else {
+//   //     res.status(500).send("Comment was not added");
+//   //   }
+// });
 
 module.exports = router;
