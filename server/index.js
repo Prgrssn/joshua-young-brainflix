@@ -3,7 +3,7 @@ const app = express();
 const fs = require("fs");
 
 app.use(express.json());
-app.use(express.urlencoded());
+// app.use(express.urlencoded());
 
 let videoData = [];
 
@@ -38,11 +38,11 @@ app.get("/videos/:id", (req, res) => {
 });
 
 app.post("/videos", (res, req) => {
-  console.log(req.body);
-
+  console.log(req.req.body);
   let videos = videoData;
-  const { id, title, image, description } = req.body;
+  const { id, title, image, description } = req.req.body;
   const newVideo = { id, title, image, description };
+  console.log(req);
   videos.push(newVideo);
   fs.writeFile("./data/video-details.json", JSON.stringify(videos), (err) => {
     if (err) {
@@ -54,9 +54,9 @@ app.post("/videos", (res, req) => {
   });
 
   if (newVideo) {
-    res.status(201).json(newVideo);
+    res.res.status(201).json(newVideo);
   } else {
-    res.status(500).send("Video not uploaded");
+    res.res.status(500).send("Video not uploaded");
   }
 });
 
