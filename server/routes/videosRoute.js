@@ -19,7 +19,15 @@ const getVideoData = () => {
 getVideoData();
 
 router.get("/", (req, res) => {
-  res.json(videoData);
+  const strippedData = videoData.map((video) => {
+    return {
+      id: video.id,
+      title: video.title,
+      channel: video.channel,
+      image: video.image,
+    };
+  });
+  res.json(strippedData);
 });
 
 router.get("/:id", (req, res) => {

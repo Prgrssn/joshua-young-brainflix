@@ -1,0 +1,27 @@
+{
+  "name": "joshua-young-brainflix",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^6.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cd server && npm run start",
+    "client": "cd client && npm run start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prgrssn/joshua-young-brainflix.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prgrssn/joshua-young-brainflix/issues"
+  },
+  "homepage": "https://github.com/Prgrssn/joshua-young-brainflix#readme"
+}
