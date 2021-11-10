@@ -5,8 +5,14 @@ import photo from "../../assets/images/retallack.jpeg";
 import { Link } from "react-router-dom";
 
 export default function UploadPage() {
-  const handleSubmit = () => {
-    alert("Video Published!");
+  const handleSubmit = (event) => {
+    console.log(event);
+    // const newVideo = {
+    //   title: event.target.title.value,
+    //   description: event.target.description.value,
+    // };
+
+    // alert("Video Published!");
   };
 
   return (
