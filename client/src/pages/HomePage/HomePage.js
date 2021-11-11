@@ -18,20 +18,14 @@ export default class HomePage extends Component {
 
   componentDidMount() {
     axios
-      // .get(`${videoListAPI}${APIKey}`)
       .get(backEndAPI)
       .then((res) => {
         const videos = res.data;
         this.setState({ videoData: videos });
-        return (
-          axios
-            // .get(`${videoListAPI}/${videos[0].id}/${APIKey}`)
-            .get(`${backEndAPI}/${videos[0].id}`)
-            .then((res) => {
-              const video = res.data;
-              this.setState({ heroData: video, isLoading: false });
-            })
-        );
+        return axios.get(`${backEndAPI}/${videos[0].id}`).then((res) => {
+          const video = res.data;
+          this.setState({ heroData: video, isLoading: false });
+        });
       })
       .catch((err) => console.log(err));
   }
@@ -41,17 +35,12 @@ export default class HomePage extends Component {
     const videoID = this.state.heroData.id;
 
     axios
-      // .post(`${videoListAPI}/${videoID}/comments/${APIKey}`, {
-      //   name: "JYoungMoneyMillionaire" || null,
-      //   comment: event.target.comment.value || null,
-      // })
       .post(`${backEndAPI}/${videoID}/comments`, {
         name: "JYoungMoneyMillionaire" || null,
         comment: event.target.comment.value || null,
       })
       .then((res) => {
         console.log(res);
-        // return axios.get(`${videoListAPI}/${videoID}/${APIKey}`).then((res) => {
         return axios.get(`${backEndAPI}/${videoID}`).then((res) => {
           const video = res.data;
           this.setState({ heroData: video });
@@ -65,7 +54,6 @@ export default class HomePage extends Component {
 
     if (prevProps.match.params.id !== newVideoID) {
       axios
-        // .get(`${videoListAPI}/${newVideoID}/${APIKey}`)
         .get(`${backEndAPI}/${newVideoID}`)
         .then((res) => {
           const newVideo = res.data;

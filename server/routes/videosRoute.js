@@ -48,7 +48,13 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   let videos = videoData;
   const { title, description } = req.body;
-  const newVideo = { id: randomUUID(), title, description };
+  const newVideo = {
+    id: randomUUID(),
+    title,
+    description,
+    image: "server/public/retallack.jpeg",
+    channel: "JYoungMoney",
+  };
   videos.push(newVideo);
   fs.writeFile("./data/video-details.json", JSON.stringify(videos), (err) => {
     if (err) {
