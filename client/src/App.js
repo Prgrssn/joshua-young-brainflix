@@ -12,7 +12,13 @@ function App() {
       <Switch>
         <Route path="/" exact component={HomePage} />
         <Route path="/videos/:id" component={HomePage} />
-        <Route path="/upload" component={UploadPage} />
+        {/* <Route path="/upload" component={UploadPage} /> */}
+        <Route
+          path="/upload"
+          render={(props) => {
+            return <UploadPage {...props} />;
+          }}
+        />
       </Switch>
     </Router>
   );

@@ -1,25 +1,31 @@
 import React from "react";
 import "./UploadPage.scss";
 import photo from "../../assets/images/retallack.jpeg";
+import axios from "axios";
 
-import { Link } from "react-router-dom";
+const backEndAPI = `http://localhost:8080/videos`;
 
-export default function UploadPage() {
+export default function UploadPage({ history }) {
   const handleSubmit = (event) => {
-    console.log(event);
-    // const newVideo = {
-    //   title: event.target.title.value,
-    //   description: event.target.description.value,
-    // };
+    const newVideo = {
+      title: event.target.title.value,
+      description: event.target.description.value,
+    };
 
-    // alert("Video Published!");
+    axios
+      .post(backEndAPI, newVideo)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+
+    alert("Video Published!");
+    history.push("/");
   };
 
   return (
     <section className="upload-section">
       <hr className="upload-section__hr" />
       <h1 className="upload-section__title">Upload Video</h1>
-      <form id="upload-form" className="upload-form">
+      <form id="upload-form" className="upload-form" onSubmit={handleSubmit}>
         <div className="upload-form__video">
           <label className="upload-form__lable" htmlFor="photo">
             VIDEO THUMBNAIL
@@ -55,14 +61,12 @@ export default function UploadPage() {
         <button className="upload-form__button-cont--cancel-button">
           CANCEL
         </button>
-
         <button
           form="upload-form"
           type="submit"
-          onClick={handleSubmit}
           className="upload-form__button-cont--publish-button"
         >
-          <Link to="/">PUBLISH</Link>
+          PUBLISH
         </button>
       </div>
     </section>
