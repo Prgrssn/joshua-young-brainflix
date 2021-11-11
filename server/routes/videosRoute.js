@@ -52,7 +52,7 @@ router.post("/", (req, res) => {
     id: randomUUID(),
     title,
     description,
-    image: "server/public/retallack.jpeg",
+    image: "retallack.jpeg",
     channel: "JYoungMoney",
   };
   videos.push(newVideo);
