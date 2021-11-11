@@ -7,17 +7,27 @@ const backEndAPI = `http://localhost:8080/videos`;
 
 export default function UploadPage({ history }) {
   const handleSubmit = (event) => {
-    const newVideo = {
-      title: event.target.title.value,
-      description: event.target.description.value,
-    };
+    if (event.target.title.value && event.target.description.value) {
+      const newVideo = {
+        title: event.target.title.value,
+        description: event.target.description.value,
+      };
 
-    axios
-      .post(backEndAPI, newVideo)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+      axios
+        .post(backEndAPI, newVideo)
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
 
-    alert("Video Published!");
+      alert("Video Published!");
+      history.push("/");
+    } else {
+      event.preventDefault();
+      alert("Please select a video to upload");
+    }
+  };
+
+  const handleCancel = () => {
+    alert("Video Upload Canceled!");
     history.push("/");
   };
 
@@ -58,7 +68,11 @@ export default function UploadPage({ history }) {
         </div>
       </form>
       <div className="upload-form__button-cont">
-        <button className="upload-form__button-cont--cancel-button">
+        <button
+          type="submit"
+          onClick={handleCancel}
+          className="upload-form__button-cont--cancel-button"
+        >
           CANCEL
         </button>
         <button
