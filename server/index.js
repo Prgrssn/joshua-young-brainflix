@@ -8,6 +8,10 @@ const videosRoute = require("./routes/videosRoute");
 app.use(cors());
 app.use(express.json());
 
+app.use(express.static(__dirname + "/public"));
+
+console.log(__dirname);
+
 app.use("/videos", videosRoute);
 
 app.listen(PORT, () => {
