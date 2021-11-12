@@ -2,9 +2,12 @@ const express = require("express");
 const router = express.Router();
 const app = express();
 const fs = require("fs");
+const path = require("path");
 const { randomUUID } = require("crypto");
 
 let videoData = [];
+
+app.use("/public", express.static(path.join(__dirname, "/public")));
 
 const getVideoData = () => {
   fs.readFile("./data/video-details.json", (err, data) => {
@@ -52,7 +55,7 @@ router.post("/", (req, res) => {
     id: randomUUID(),
     title,
     description,
-    image: "retallack.jpeg",
+    image: "/retallack.jpeg",
     channel: "JYoungMoney",
   };
   videos.push(newVideo);

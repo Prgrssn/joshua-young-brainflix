@@ -4,9 +4,6 @@ import VideoPlayer from "../../components/video-player/VideoPlayer";
 import Main from "../../components/main/Main";
 import axios from "axios";
 
-// const videoListAPI = `https://project-2-api.herokuapp.com/videos`;
-// const APIKey = "?api_key=02e4d4cc-df22-4061-b063-e1c63073a3fa";
-
 const backEndAPI = `http://localhost:8080/videos`;
 
 export default class HomePage extends Component {
