@@ -4,7 +4,7 @@ import "./VideoCard.scss";
 export default function VideoCard({ video, changeVideo }) {
   return (
     <NavLink to={`/videos/${video.id}`}>
-      <div className="video-card">
+      <article className="video-card">
         <div className="video-card__img-container">
           <img
             className="video-card__img-container--img"
@@ -16,7 +16,7 @@ export default function VideoCard({ video, changeVideo }) {
           <p className="video-card__details--title">{video.title}</p>
           <p className="video-card__details--channel">{video.channel}</p>
         </div>
-      </div>
+      </article>
     </NavLink>
   );
 }

@@ -4,7 +4,7 @@ import "./CommentForm.scss";
 
 export default function CommentForm({ handleSubmit }) {
   return (
-    <div className="comment-add">
+    <article className="comment-add">
       <div className="comment-add__avatar">
         <Avatar />
       </div>
@@ -23,6 +23,6 @@ export default function CommentForm({ handleSubmit }) {
           COMMENT
         </button>
       </form>
-    </div>
+    </article>
   );
 }
