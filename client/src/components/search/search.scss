@@ -68,10 +68,6 @@
       padding-right: 0;
       width: 10rem;
       max-height: 2.5rem;
-
-      // position: absolute;
-      // top: 0;
-      // right: 15rem;
     }
   }
 
@@ -93,12 +89,6 @@
       position: relative;
       margin-top: 1rem;
       margin-right: 1rem;
-      // justify-content: space-evenly;
-    }
-
-    @include desktop {
-      // // margin-top: 1.5rem;
-      // padding: 0;
     }
 
     &:hover {
