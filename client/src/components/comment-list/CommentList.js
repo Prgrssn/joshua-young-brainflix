@@ -1,9 +1,7 @@
 import React from "react";
 import "./CommentList.scss";
-import "../Comment-card/CommentCard";
+import CommentCard from "../Comment-card/CommentCard";
 import { v4 as uuidv4 } from "uuid";
-
-import CommentCard from "../comment-card/CommentCard";
 
 export default function CommentList(props) {
   return (

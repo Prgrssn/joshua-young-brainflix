@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./HomePage.scss";
-import VideoPlayer from "../../components/video-player/VideoPlayer";
+import VideoPlayer from "../../components/Video-player/VideoPlayer";
 import Main from "../../components/Main/Main";
 import axios from "axios";
 
