@@ -1,7 +1,7 @@
 import React from "react";
-import CommentForm from "../comment-form/CommentForm";
-import CommentList from "../comment-list/CommentList";
-import VideoDetails from "../hero-video-details/VideoDetails";
+import CommentForm from "../Comment-form/CommentForm";
+import CommentList from "../Comment-list/CommentList";
+import VideoDetails from "../Hero-video-details/VideoDetails";
 import "./Hero.scss";
 
 export default function Hero({ video, heroVideo, handleSubmit }) {

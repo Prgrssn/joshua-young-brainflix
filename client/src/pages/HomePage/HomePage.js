@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./HomePage.scss";
 import VideoPlayer from "../../components/video-player/VideoPlayer";
-import Main from "../../components/main/Main";
+import Main from "../../components/Main/Main";
 import axios from "axios";
 
 const backEndAPI = `http://localhost:8080/videos`;

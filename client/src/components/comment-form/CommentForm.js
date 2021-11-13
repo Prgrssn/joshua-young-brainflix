@@ -1,5 +1,5 @@
 import React from "react";
-import Avatar from "../avatar/Avatar";
+import Avatar from "../Avatar/Avatar";
 import "./CommentForm.scss";
 
 export default function CommentForm({ handleSubmit }) {
