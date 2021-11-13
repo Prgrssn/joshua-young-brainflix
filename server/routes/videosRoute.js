@@ -54,6 +54,22 @@ router.post("/", (req, res) => {
     description,
     image: "/retallack.jpeg",
     channel: "JYoungMoney",
+    views: "420",
+    likes: "69",
+    comments: [
+      {
+        name: "Bill Nye",
+        comment: "This is absolutely radical!",
+        likes: 3,
+        timestamp: 1632512763000,
+      },
+      {
+        name: "Stoked Skier Bro",
+        comment: "Broooo!!! Righteous broooo!",
+        likes: 0,
+        timestamp: 1632496261000,
+      },
+    ],
   };
   videos.push(newVideo);
   fs.writeFile("./data/video-details.json", JSON.stringify(videos), (err) => {
@@ -71,42 +87,5 @@ router.post("/", (req, res) => {
     res.status(500).send("Video not uploaded");
   }
 });
-
-// router.post("/:id/comments", (req, res) => {
-//   let videos = videoData;
-//   let videoId = req.params.id;
-
-//   const singleVideo = videos.find((video) => {
-//     return video.id === videoId;
-//   });
-
-//   const { name, comment } = req.body;
-//   const newComment = { id: randomUUID(), name, comment };
-
-//   if (newComment) {
-//     videos[indexOf(singleVideo)];
-//     console.log(videos);
-//   } else {
-//     console.log((err) => err);
-//   }
-
-//   //   videos[indexOf(singleVideo)]
-
-//   //   videos[indexOf(singleVideo)].comments.push(newComment);
-//   //   fs.writeFile("./data/video-details.json", JSON.stringify(videos), (err) => {
-//   //     if (err) {
-//   //       console.log(err);
-//   //       return;
-//   //     } else {
-//   //       console.log("Successfully added new comment");
-//   //     }
-//   //   });
-
-//   //   if (newComment) {
-//   //     res.status(201).json(newComment);
-//   //   } else {
-//   //     res.status(500).send("Comment was not added");
-//   //   }
-// });
 
 module.exports = router;

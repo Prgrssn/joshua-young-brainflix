@@ -19,31 +19,17 @@ export default class HomePage extends Component {
       .then((res) => {
         const videos = res.data;
         this.setState({ videoData: videos });
-        return axios.get(`${backEndAPI}/${videos[0].id}`).then((res) => {
-          const video = res.data;
-          this.setState({ heroData: video, isLoading: false });
-        });
+        return axios.get(`${backEndAPI}/${videos[0].id}`);
+      })
+      .then((res) => {
+        const video = res.data;
+        this.setState({ heroData: video, isLoading: false });
       })
       .catch((err) => console.log(err));
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const videoID = this.state.heroData.id;
-
-    axios
-      .post(`${backEndAPI}/${videoID}/comments`, {
-        name: "JYoungMoneyMillionaire" || null,
-        comment: event.target.comment.value || null,
-      })
-      .then((res) => {
-        console.log(res);
-        return axios.get(`${backEndAPI}/${videoID}`).then((res) => {
-          const video = res.data;
-          this.setState({ heroData: video });
-        });
-      })
-      .catch((err) => console.log(err));
   };
 
   componentDidUpdate(prevProps, prevState) {

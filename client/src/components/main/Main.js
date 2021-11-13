@@ -1,6 +1,6 @@
 import React from "react";
-import Hero from "../hero/Hero";
-import VideoList from "../videolist/VideoList";
+import Hero from "../Hero/Hero";
+import VideoList from "../Videolist/VideoList";
 import "./Main.scss";
 
 export default function Main({ video, heroVideo, changeVideo, handleSubmit }) {
